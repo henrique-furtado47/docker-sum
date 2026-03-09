@@ -1,4 +1,4 @@
-name: ci-python
+name: ci-sum-python
 on: [push]
 jobs:
   check-application:
@@ -28,4 +28,4 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           push: true #
-          tags: henriquefurtado47/ci-sum-python:${{ github.sha }} #
+          tags: ${{ secrets.DOCKER_USERNAME }}/ci-sum-python:${{ github.sha }} #
